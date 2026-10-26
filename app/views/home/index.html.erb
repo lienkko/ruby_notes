@@ -1,0 +1,11 @@
+<main>
+  <h1>Трекер заметок</h1>
+
+  <% if logged_in? %>
+    <p>Вы залогинены как <strong><%= current_user.email %></strong>.</p>
+    <p>Здесь появится список ваших заметок на следующем этапе.</p>
+  <% else %>
+    <p>Вы не залогинены.</p>
+    <p><%= link_to "Войти", login_path %> или <%= link_to "создать аккаунт", register_path %>.</p>
+  <% end %>
+</main>
